@@ -8,7 +8,13 @@ import zipfile
 import subprocess
 import shutil
 
-KEY_P12_PATH = "app/sami-signing-key.p12"
+def get_signing_key_path():
+    for p in ["app/sami-signing-key.p12", "sami-signing-key.p12", "../app/sami-signing-key.p12"]:
+        if os.path.exists(p):
+            return p
+    return "app/sami-signing-key.p12"
+
+KEY_P12_PATH = get_signing_key_path()
 KEY_PASSWORD = "samitrading"
 KEY_ALIAS = "sami"
 SIGNER_PEM_PATH = "/tmp/sami_signer.pem"
@@ -20,8 +26,9 @@ VERSION_CODE = 16
 VERSION_NAME = "1.3.2"
 
 def ensure_signer_keys():
-    if not os.path.exists(KEY_P12_PATH):
-        raise FileNotFoundError(f"Signing key not found at {KEY_P12_PATH}")
+    key_path = get_signing_key_path()
+    if not os.path.exists(key_path):
+        raise FileNotFoundError(f"Signing key not found at {key_path}")
         
     # Extract combined PEM
     subprocess.run([

@@ -1092,6 +1092,128 @@
       "displayMemberCount": 1,
       "createdAt": 1794181318462,
       "updatedAt": 1794181318462
+    },
+    "e2e_pub_test_1794212039523": {
+      "id": "e2e_pub_test_1794212039523",
+      "name": "قناة اختبار عامة مفتوحة",
+      "password": "",
+      "isOpenPublic": true,
+      "isPrivate": false,
+      "visibility": "public",
+      "allowedMemberIds": [
+        1
+      ],
+      "memberIds": [
+        1,
+        2
+      ],
+      "description": "",
+      "imageUrl": null,
+      "displayMemberCount": 1,
+      "createdAt": 1794212039527,
+      "updatedAt": 1794212039540
+    },
+    "e2e_pwd_chan1_1794212039523": {
+      "id": "e2e_pwd_chan1_1794212039523",
+      "name": "قناة التوصيات 1 (محمية بكلمة مرور)",
+      "password": "SecretTradingPass2026",
+      "isOpenPublic": false,
+      "isPrivate": true,
+      "visibility": "public",
+      "allowedMemberIds": [
+        1,
+        2,
+        5
+      ],
+      "memberIds": [
+        1,
+        2
+      ],
+      "description": "",
+      "imageUrl": null,
+      "displayMemberCount": 1,
+      "createdAt": 1794212039533,
+      "updatedAt": 1794212039711
+    },
+    "e2e_pwd_chan2_1794212039523": {
+      "id": "e2e_pwd_chan2_1794212039523",
+      "name": "قناة التوصيات 2 (مستقلة تماماً)",
+      "password": "SecretTradingPass2026",
+      "isOpenPublic": false,
+      "isPrivate": true,
+      "visibility": "public",
+      "allowedMemberIds": [
+        1
+      ],
+      "memberIds": [
+        1
+      ],
+      "description": "",
+      "imageUrl": null,
+      "displayMemberCount": 1,
+      "createdAt": 1794212039536,
+      "updatedAt": 1794212039536
+    },
+    "e2e_pub_test_1794212357061": {
+      "id": "e2e_pub_test_1794212357061",
+      "name": "قناة اختبار عامة مفتوحة",
+      "password": "",
+      "isOpenPublic": true,
+      "isPrivate": false,
+      "visibility": "public",
+      "allowedMemberIds": [
+        1
+      ],
+      "memberIds": [
+        1,
+        2
+      ],
+      "description": "",
+      "imageUrl": null,
+      "displayMemberCount": 1,
+      "createdAt": 1794212357062,
+      "updatedAt": 1794212357074
+    },
+    "e2e_pwd_chan1_1794212357061": {
+      "id": "e2e_pwd_chan1_1794212357061",
+      "name": "قناة التوصيات 1 (محمية بكلمة مرور)",
+      "password": "SecretTradingPass2026",
+      "isOpenPublic": false,
+      "isPrivate": true,
+      "visibility": "public",
+      "allowedMemberIds": [
+        1,
+        2,
+        5
+      ],
+      "memberIds": [
+        1,
+        2
+      ],
+      "description": "",
+      "imageUrl": null,
+      "displayMemberCount": 1,
+      "createdAt": 1794212357065,
+      "updatedAt": 1794212357148
+    },
+    "e2e_pwd_chan2_1794212357061": {
+      "id": "e2e_pwd_chan2_1794212357061",
+      "name": "قناة التوصيات 2 (مستقلة تماماً)",
+      "password": "SecretTradingPass2026",
+      "isOpenPublic": false,
+      "isPrivate": true,
+      "visibility": "public",
+      "allowedMemberIds": [
+        1
+      ],
+      "memberIds": [
+        1
+      ],
+      "description": "",
+      "imageUrl": null,
+      "displayMemberCount": 1,
+      "createdAt": 1794212357068,
+      "updatedAt": 1794212357068
     }
   },
   "channelMessages": {
@@ -1703,6 +1825,78 @@
         "fileName": null,
         "replyTo": null,
         "timestamp": 1794181318490,
+        "pinned": false,
+        "reactions": {}
+      }
+    ],
+    "e2e_pub_test_1794212039523": [
+      {
+        "id": "msg_1794212039546_5ujkx",
+        "channelId": "e2e_pub_test_1794212039523",
+        "senderId": 2,
+        "senderName": "Hani Alqadasi",
+        "senderRole": "user",
+        "text": "رسالة تجريبية في القناة العامة المفتوحة",
+        "imageUrl": null,
+        "audioUrl": null,
+        "fileUrl": null,
+        "fileName": null,
+        "replyTo": null,
+        "timestamp": 1794212039546,
+        "pinned": false,
+        "reactions": {}
+      }
+    ],
+    "e2e_pwd_chan1_1794212039523": [
+      {
+        "id": "msg_1794212039591_54c10",
+        "channelId": "e2e_pwd_chan1_1794212039523",
+        "senderId": 1,
+        "senderName": "Sami",
+        "senderRole": "owner",
+        "text": "رسالة تاريخية هامة في القناة للتأكد من حفظ البيانات",
+        "imageUrl": null,
+        "audioUrl": null,
+        "fileUrl": null,
+        "fileName": null,
+        "replyTo": null,
+        "timestamp": 1794212039591,
+        "pinned": false,
+        "reactions": {}
+      }
+    ],
+    "e2e_pub_test_1794212357061": [
+      {
+        "id": "msg_1794212357077_5clmd",
+        "channelId": "e2e_pub_test_1794212357061",
+        "senderId": 2,
+        "senderName": "Hani Alqadasi",
+        "senderRole": "user",
+        "text": "رسالة تجريبية في القناة العامة المفتوحة",
+        "imageUrl": null,
+        "audioUrl": null,
+        "fileUrl": null,
+        "fileName": null,
+        "replyTo": null,
+        "timestamp": 1794212357077,
+        "pinned": false,
+        "reactions": {}
+      }
+    ],
+    "e2e_pwd_chan1_1794212357061": [
+      {
+        "id": "msg_1794212357117_m3zfi",
+        "channelId": "e2e_pwd_chan1_1794212357061",
+        "senderId": 1,
+        "senderName": "Sami",
+        "senderRole": "owner",
+        "text": "رسالة تاريخية هامة في القناة للتأكد من حفظ البيانات",
+        "imageUrl": null,
+        "audioUrl": null,
+        "fileUrl": null,
+        "fileName": null,
+        "replyTo": null,
+        "timestamp": 1794212357117,
         "pinned": false,
         "reactions": {}
       }

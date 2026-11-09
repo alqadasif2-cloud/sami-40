@@ -47,7 +47,37 @@ function request(options: {
   });
 }
 
+import express from 'express';
+import { apiRouter } from '../src/server/routes.ts';
+
+let internalServer: http.Server | null = null;
+
+async function ensureServerRunning(): Promise<void> {
+  try {
+    await request({ path: '/api/channels' });
+    return;
+  } catch {
+    console.log('[Test Suite] Server not running on http://127.0.0.1:3000. Starting internal Express server...');
+    const app = express();
+    app.use(express.json({ limit: '50mb' }));
+    app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+    app.use('/api', apiRouter);
+
+    await new Promise<void>((resolve, reject) => {
+      internalServer = app.listen(3000, '127.0.0.1', () => {
+        console.log('[Test Suite] Internal test server started successfully on http://127.0.0.1:3000');
+        resolve();
+      });
+      internalServer.on('error', (err) => {
+        console.warn('[Test Suite] Listen warning (server might have started concurrently):', err.message);
+        resolve();
+      });
+    });
+  }
+}
+
 async function runTests() {
+  await ensureServerRunning();
   console.log('================================================================');
   console.log('   SAMI CHANNEL ACCESS CONTROL & MEMBERSHIP VERIFICATION SUITE   ');
   console.log('================================================================\n');
@@ -416,9 +446,15 @@ async function runTests() {
     process.exit(1);
   }
   console.log('================================================================\n');
+  if (internalServer) {
+    internalServer.close();
+  }
 }
 
 runTests().catch((e) => {
   console.error('Fatal test error:', e);
+  if (internalServer) {
+    internalServer.close();
+  }
   process.exit(1);
 });

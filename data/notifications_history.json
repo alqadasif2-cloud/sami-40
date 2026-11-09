@@ -169,5 +169,79 @@
     "timestamp": 1794184178073,
     "priority": "high",
     "fcmStatus": "queued"
+  },
+  {
+    "id": "notif_1794212039549_2_tespn",
+    "type": "channel_important",
+    "title": "Hani Alqadasi • قناة اختبار عامة مفتوحة",
+    "body": "رسالة تجريبية في القناة العامة المفتوحة",
+    "senderId": 2,
+    "senderName": "Hani Alqadasi",
+    "channelId": "e2e_pub_test_1794212039523",
+    "partnerId": null,
+    "chatType": "channel",
+    "messageId": "msg_1794212039546_5ujkx",
+    "targetUserIds": [
+      1
+    ],
+    "timestamp": 1794212039549,
+    "priority": "high",
+    "fcmStatus": "queued"
+  },
+  {
+    "id": "notif_1794212039593_1_re89n",
+    "type": "channel_important",
+    "title": "👑 Sami • قناة التوصيات 1 (محمية بكلمة مرور)",
+    "body": "رسالة تاريخية هامة في القناة للتأكد من حفظ البيانات",
+    "senderId": 1,
+    "senderName": "Sami",
+    "channelId": "e2e_pwd_chan1_1794212039523",
+    "partnerId": null,
+    "chatType": "channel",
+    "messageId": "msg_1794212039591_54c10",
+    "targetUserIds": [
+      2,
+      5
+    ],
+    "timestamp": 1794212039593,
+    "priority": "high",
+    "fcmStatus": "queued"
+  },
+  {
+    "id": "notif_1794212357078_2_q7ipe",
+    "type": "channel_important",
+    "title": "Hani Alqadasi • قناة اختبار عامة مفتوحة",
+    "body": "رسالة تجريبية في القناة العامة المفتوحة",
+    "senderId": 2,
+    "senderName": "Hani Alqadasi",
+    "channelId": "e2e_pub_test_1794212357061",
+    "partnerId": null,
+    "chatType": "channel",
+    "messageId": "msg_1794212357077_5clmd",
+    "targetUserIds": [
+      1
+    ],
+    "timestamp": 1794212357078,
+    "priority": "high",
+    "fcmStatus": "queued"
+  },
+  {
+    "id": "notif_1794212357118_1_znsrx",
+    "type": "channel_important",
+    "title": "👑 Sami • قناة التوصيات 1 (محمية بكلمة مرور)",
+    "body": "رسالة تاريخية هامة في القناة للتأكد من حفظ البيانات",
+    "senderId": 1,
+    "senderName": "Sami",
+    "channelId": "e2e_pwd_chan1_1794212357061",
+    "partnerId": null,
+    "chatType": "channel",
+    "messageId": "msg_1794212357117_m3zfi",
+    "targetUserIds": [
+      2,
+      5
+    ],
+    "timestamp": 1794212357118,
+    "priority": "high",
+    "fcmStatus": "queued"
   }
 ]
