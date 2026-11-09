@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from './samiReactShim.ts';
+import React, { useState, useEffect, useRef, useCallback } from './samiReactShim';
 import JSZip from 'jszip';
 import {
   SAMI_EXPECTED_APP_ID,

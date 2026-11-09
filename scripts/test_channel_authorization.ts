@@ -48,7 +48,7 @@ function request(options: {
 }
 
 import express from 'express';
-import { apiRouter } from '../src/server/routes.ts';
+import { apiRouter } from '../src/server/routes';
 
 let internalServer: http.Server | null = null;
 

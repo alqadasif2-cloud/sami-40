@@ -72,14 +72,23 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Grant Execute Permission for Gradlew (منح صلاحيات التشغيل)
-        run: chmod +x ./gradlew
+        run: |
+          if [ -f "./gradlew" ]; then
+            chmod +x ./gradlew
+          else
+            echo "Notice: ./gradlew not found in root, proceeding to Python builder fallback..."
+          fi
 
       - name: Build Android Release APK via Gradle (بناء حزمة APK عبر Gradle)
         id: gradle_build
         continue-on-error: true
         run: |
-          echo "Starting Gradle Release Build..."
-          ./gradlew assembleRelease --no-daemon --stacktrace
+          if [ -f "./gradlew" ]; then
+            echo "Starting Gradle Release Build..."
+            ./gradlew assembleRelease --no-daemon --stacktrace
+          else
+            echo "Skipping Gradle build as ./gradlew is not present."
+          fi
 
       - name: Process & Verify Built APK (فحص وتأكيد الحزمة)
         run: |

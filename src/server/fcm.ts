@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { getChannelById, projectId, databaseId } from './db.ts';
+import { getChannelById, projectId, databaseId } from './db';
 
 export interface DeviceTokenRecord {
   id: string;

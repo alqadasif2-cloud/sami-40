@@ -26,7 +26,7 @@ import {
   supabaseUpsertAppUpdate,
   syncAllToSupabase,
   reconcileSupabaseData,
-} from './supabase.ts';
+} from './supabase';
 
 /**
  * Google Cloud Firestore Persistence Layer for Sami Full-Stack Application
@@ -110,7 +110,7 @@ try {
   console.warn('[Sami DB] Firestore client notice:', firestoreInitError);
 }
 
-import { firestoreMetrics } from './metrics.ts';
+import { firestoreMetrics } from './metrics';
 
 export { firestoreClient };
 
@@ -563,7 +563,7 @@ export async function createUserRecord(user: {
 
   // 3. Dual-write to Supabase secondary replica if configured
   if (isSupabaseConfigured()) {
-    supabaseUpsertUser(record).catch((e) =>
+    supabaseUpsertUser(record).catch((e: any) =>
       console.warn('[Sami DB] Supabase dual-write user note:', e?.message || e)
     );
   }
@@ -922,7 +922,7 @@ export async function saveChannelRecord(channel: ChannelRecord): Promise<void> {
 
   // Dual-write to Supabase secondary replica if configured
   if (isSupabaseConfigured()) {
-    supabaseUpsertChannel(channel).catch((e) =>
+    supabaseUpsertChannel(channel).catch((e: any) =>
       console.warn('[Sami DB] Supabase save channel note:', e?.message || e)
     );
   }
@@ -1247,7 +1247,7 @@ export async function saveChannelMessage(message: ChannelMessage): Promise<void>
 
   // Dual-write to Supabase secondary replica if configured
   if (isSupabaseConfigured()) {
-    supabaseInsertChannelMessage(message).catch((e) =>
+    supabaseInsertChannelMessage(message).catch((e: any) =>
       console.warn('[Sami DB] Supabase message write notice:', e?.message || e)
     );
   }
@@ -1452,7 +1452,7 @@ export async function saveUserChallenge(challenge: ChallengeRecord): Promise<voi
 
   // Dual-write to Supabase secondary replica if configured
   if (isSupabaseConfigured()) {
-    supabaseUpsertUserChallenge(challenge).catch((e) =>
+    supabaseUpsertUserChallenge(challenge).catch((e: any) =>
       console.warn('[Sami DB] Supabase save challenge note:', e?.message || e)
     );
   }
@@ -1509,7 +1509,7 @@ export async function addTradeRecord(userId: number, trade: TradeRecord, updated
 
   // Dual-write to Supabase secondary replica if configured
   if (isSupabaseConfigured()) {
-    supabaseInsertTrade(trade, updatedChallenge).catch((e) =>
+    supabaseInsertTrade(trade, updatedChallenge).catch((e: any) =>
       console.warn('[Sami DB] Supabase insert trade note:', e?.message || e)
     );
   }
@@ -2021,7 +2021,7 @@ export async function savePrivateMessageRecord(msg: PrivateMessageRecord): Promi
 
   // Dual-write to Supabase secondary replica if configured
   if (isSupabaseConfigured()) {
-    supabaseInsertPrivateMessage(fullRecord).catch((e) =>
+    supabaseInsertPrivateMessage(fullRecord).catch((e: any) =>
       console.warn('[Sami DB] Supabase insert private message note:', e?.message || e)
     );
   }
@@ -2702,7 +2702,7 @@ async function writeAndVerifySharedAppUpdateDoc(docId: string, record: AppUpdate
 
   // Dual-write to Supabase secondary replica if configured
   if (docId === 'latest' && isSupabaseConfigured()) {
-    supabaseUpsertAppUpdate(normalized).catch((e) =>
+    supabaseUpsertAppUpdate(normalized).catch((e: any) =>
       console.warn('[Sami DB] Supabase app update save note:', e?.message || e)
     );
   }

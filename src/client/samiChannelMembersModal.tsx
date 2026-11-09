@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from './samiReactShim.ts';
+import React, { useState, useEffect, useMemo } from './samiReactShim';
 
 export interface ChannelRecordItem {
   id: string;

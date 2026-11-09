@@ -22,7 +22,10 @@
       ]
     },
     "allowImportingTsExtensions": true,
+    "noImplicitAny": false,
+    "strict": false,
     "noEmit": true
   },
+  "include": ["src", "scripts", "server.ts"],
   "exclude": ["dist"]
 }

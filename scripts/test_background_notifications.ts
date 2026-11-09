@@ -4,7 +4,7 @@ import {
   unregisterDeviceToken,
   dispatchAuthorizedChatPush,
   sendNotificationToUsers,
-} from '../src/server/fcm.ts';
+} from '../src/server/fcm';
 
 async function runNotificationTests() {
   console.log('================================================================');

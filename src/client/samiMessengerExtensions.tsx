@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from './samiReactShim.ts';
+import React, { useState, useEffect } from './samiReactShim';
 
 export const SAMI_EMOJIS = ['❤️', '😂', '👍', '🔥', '👏', '😮'];
 

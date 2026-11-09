@@ -243,5 +243,42 @@
     "timestamp": 1794212357118,
     "priority": "high",
     "fcmStatus": "queued"
+  },
+  {
+    "id": "notif_1794216917133_2_ur7tx",
+    "type": "channel_important",
+    "title": "Hani Alqadasi • قناة اختبار عامة مفتوحة",
+    "body": "رسالة تجريبية في القناة العامة المفتوحة",
+    "senderId": 2,
+    "senderName": "Hani Alqadasi",
+    "channelId": "e2e_pub_test_1794216917109",
+    "partnerId": null,
+    "chatType": "channel",
+    "messageId": "msg_1794216917131_fkglg",
+    "targetUserIds": [
+      1
+    ],
+    "timestamp": 1794216917133,
+    "priority": "high",
+    "fcmStatus": "queued"
+  },
+  {
+    "id": "notif_1794216917177_1_ibsia",
+    "type": "channel_important",
+    "title": "👑 Sami • قناة التوصيات 1 (محمية بكلمة مرور)",
+    "body": "رسالة تاريخية هامة في القناة للتأكد من حفظ البيانات",
+    "senderId": 1,
+    "senderName": "Sami",
+    "channelId": "e2e_pwd_chan1_1794216917109",
+    "partnerId": null,
+    "chatType": "channel",
+    "messageId": "msg_1794216917176_1zhp1",
+    "targetUserIds": [
+      2,
+      5
+    ],
+    "timestamp": 1794216917177,
+    "priority": "high",
+    "fcmStatus": "queued"
   }
 ]

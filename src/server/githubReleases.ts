@@ -1,5 +1,5 @@
 import type { Response } from 'express';
-import { loadGitHubVault } from './githubSecretVault.ts';
+import { loadGitHubVault } from './githubSecretVault';
 
 export const SERVER_MAX_APK_UPLOAD_BYTES = 100 * 1024 * 1024; // 100MB
 
